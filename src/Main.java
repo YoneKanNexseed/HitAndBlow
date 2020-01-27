@@ -121,10 +121,10 @@ public class Main {
 		while (true) {
 			Random rand = new Random();
 			// 0 〜 9の乱数生成
-	        int randomNumber = rand.nextInt(10);
-	        if (!numbers.contains(randomNumber)) {
-	        	return randomNumber;
-	        }
+			int randomNumber = rand.nextInt(10);
+			if (!numbers.contains(randomNumber)) {
+				return randomNumber;
+				}
 		}
 
 	}
