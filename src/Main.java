@@ -124,7 +124,7 @@ public class Main {
 			int randomNumber = rand.nextInt(10);
 			if (!numbers.contains(randomNumber)) {
 				return randomNumber;
-				}
+			}
 		}
 
 	}
