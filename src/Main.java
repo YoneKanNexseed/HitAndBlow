@@ -48,7 +48,7 @@ public class Main {
 	
 	private static void displayResult(List<Integer> numbers, List<Integer> userNumbers) {
 		int hit = countHitNum(numbers, userNumbers);
-		int blow = countBlowNum(numbers, userNumbers) - hit;
+		int blow = countBlowNum(numbers, userNumbers);
 		
 		System.out.println("===Result===");
 		System.out.println(hit + "HIT, " + blow + "BLOW");
@@ -68,9 +68,8 @@ public class Main {
 	
 	private static int countBlowNum(List<Integer> numbers, List<Integer> userNumbers) {
 		int count = 0;
-		
 		for (int i = 0; i < DIGIT_NUMBER; i++) {
-			if (numbers.contains(userNumbers.get(i))) {
+			if (numbers.get(i) != userNumbers.get(i) && userNumbers.contains(numbers.get(i))) {
 				count++;
 			}
 		}
