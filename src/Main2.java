@@ -11,8 +11,6 @@ public class Main2 {
 		
 		List<Integer> numbers = generateNumbers();
 		
-		System.out.println(numbers);
-		
 		int turnNum = 0;
 		
 		while (true) {
@@ -20,16 +18,18 @@ public class Main2 {
 			
 			List<Integer> userNumbers = inputNumbers();
 			
-			System.out.println(userNumbers);
-			
 			if (judge(numbers, userNumbers)) {
-				System.out.println("！！！！！Game Clear！！！！！");
-				System.out.println("Completed in " + turnNum + " turns");
+				displayResult(turnNum);
 				break;
 			} else {
 				displayResult(numbers, userNumbers);
 			}
 		}
+	}
+
+	private static void displayResult(int turnNum) {
+		System.out.println("！！！！！Game Clear！！！！！");
+		System.out.println("Completed in " + turnNum + " turns");
 	}
 	
 	private static List<Integer> generateNumbers() {
