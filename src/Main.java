@@ -18,8 +18,6 @@ public class Main {
 		// 正解の数字生成
 		List<Integer> numbers = generateNumbers();
 		
-		System.out.println(numbers);
-		
 		int turnNum = 0;
 		
 		while (true) {
